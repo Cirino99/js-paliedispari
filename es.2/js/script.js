@@ -12,8 +12,8 @@ button.addEventListener('click',
     function(){
         let numeroUtenteValore = parseInt(numeroUtente.value);
         const numeroValidoUtente = controlloNumero(numeroUtenteValore);
-        const numeroPc = Math.floor(Math.random() * 5 + 1);
         if (numeroValidoUtente){
+            const numeroPc = numeroRandom (1,5);
             let risultatoPariODispari = pariOdispari(numeroUtenteValore,numeroPc);
             if (pariOdispariUtente.value === risultatoPariODispari){
                 risultato.innerText = `Complimenti hai vinto il numero uscito è ${risultatoPariODispari}`;
@@ -35,9 +35,14 @@ function controlloNumero(numero){
     }
 }
 
+function numeroRandom (min,max){
+    let numero = Math.floor(Math.random() * (max-min+1) + min);
+    return numero;
+}
+
 function pariOdispari(primoNumero,secondoNumero){
     let numero = primoNumero + secondoNumero;
-    console.log(numero);
+    //console.log(numero);
     if(numero%2){
         return 'Dispari';
     } else {
