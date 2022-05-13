@@ -4,7 +4,6 @@
 
 const descrizione = document.getElementById('descrizione');
 const numeroUtente = document.getElementById('numero-utente');
-const numeroPc = Math.floor(Math.random() * 5 + 1);
 const pariOdispariUtente = document.getElementById('pari-dispari');
 const risultato = document.getElementById('risultato');
 const button = document.getElementById('invio');
@@ -42,7 +41,6 @@ function numeroRandom (min,max){
 
 function pariOdispari(primoNumero,secondoNumero){
     let numero = primoNumero + secondoNumero;
-    //console.log(numero);
     if(numero%2){
         return 'Dispari';
     } else {

@@ -4,7 +4,7 @@
 function palindroma(parola){
     let parolaUtenteInversa = '';
     for (let i=1; i<=parola.length; i++){
-        parolaUtenteInversa += parola[parola.length-i]
+        parolaUtenteInversa += parola[parola.length-i];
     }
     if (parola === parolaUtenteInversa){
         return 'La parola è palindroma';
