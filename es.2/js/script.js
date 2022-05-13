@@ -11,7 +11,7 @@ const button = document.getElementById('invio');
 button.addEventListener('click', 
     function(){
         let numeroUtenteValore = parseInt(numeroUtente.value);
-        const numeroValidoUtente = controlloNumero(numeroUtenteValore);
+        const numeroValidoUtente = controlloNumero(numeroUtenteValore,1,5);
         if (numeroValidoUtente){
             const numeroPc = numeroRandom (1,5);
             let risultatoPariODispari = pariOdispari(numeroUtenteValore,numeroPc);
@@ -26,8 +26,8 @@ button.addEventListener('click',
     }
 );
 
-function controlloNumero(numero){
-    if(numero>0 && numero<6){
+function controlloNumero(numero,min,max){
+    if(numero>=min && numero<=max){
         return true;
     }
     else{
